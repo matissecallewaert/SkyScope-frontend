@@ -3,7 +3,7 @@ import React from "react";
 function Label() {
   return (
     <div>
-      <h1> Label Details </h1>{" "}
+      <h1> Label Details </h1>
     </div>
   );
 }

@@ -6,17 +6,14 @@ function SharedPageLayout() {
   return (
     <div>
       <header>
-        {" "}
         <NavBar></NavBar>
-      </header>{" "}
+      </header>
       <main>
-        {" "}
-        <Outlet /> {/* This will render the matched nested route component */}{" "}
-      </main>{" "}
+        <Outlet />
+      </main>
       <footer>
-        {" "}
-        {/* Footer content */} <p> ©2024 Your Website </p>{" "}
-      </footer>{" "}
+        <p> ©2024 Your Website </p>
+      </footer>
     </div>
   );
 }

@@ -24,6 +24,10 @@
   color: white;
 }
 
+.flex {
+  display: flex;;
+}
+
 .App-link {
   color: #61dafb;
 }
