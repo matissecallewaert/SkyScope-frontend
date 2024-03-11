@@ -4,7 +4,7 @@ import "./train.css";
 function Train() {
   return (
     <div>
-      <p> Hello hehe: 0 </p>{" "}
+      <p> Hello hehe: 0 </p>
     </div>
   );
 }

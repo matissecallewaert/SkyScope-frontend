@@ -4,7 +4,7 @@ import "./detect.css";
 function Detect() {
   return (
     <div>
-      <h1> Object Detection </h1>{" "}
+      <h1> Object Detection </h1>
     </div>
   );
 }
