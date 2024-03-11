@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/home";
+import Dashboard from "./pages/dashboard/dashboard";
+import Train from "./pages/train/train";
+import Detect from "./pages/detect/detect";
+import Notfound from "./pages/not_found/not_found";
+import SharedPageLayout from "./pages/shared/shared";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SharedPageLayout> </SharedPageLayout>}>
+            {" "}
+            <Route index element={<Home> </Home>} />{" "}
+            <Route path="dashboard" element={<Dashboard> </Dashboard>} />{" "}
+            <Route path="train" element={<Train> </Train>} />{" "}
+            <Route path="detection" element={<Detect> </Detect>} />{" "}
+            <Route path="*" element={<Notfound> </Notfound>} />{" "}
+          </Route>{" "}
+        </Routes>{" "}
+      </BrowserRouter>{" "}
     </div>
   );
 }
