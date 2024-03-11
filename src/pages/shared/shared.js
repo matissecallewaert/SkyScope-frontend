@@ -22,7 +22,15 @@ function SharedPageLayout() {
             </li>{" "}
             <li>
               {" "}
+              <a href="/label"> Label </a>{" "}
+            </li>{" "}
+            <li>
+              {" "}
               <a href="/detection"> Detection </a>{" "}
+            </li>{" "}
+            <li>
+              {" "}
+              <a href="/contact"> Contact Us </a>{" "}
             </li>{" "}
           </ul>{" "}
         </nav>{" "}
