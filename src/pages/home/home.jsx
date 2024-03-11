@@ -1,10 +1,10 @@
 import React from "react";
+import ImagePreview from "../../components/image-preview/image-preview";
 
 function Home() {
   return (
     <div>
-      <h1> Welcome to the Homepage! </h1>
-      <p> This is a simple React homepage component. </p>
+      <ImagePreview></ImagePreview>
     </div>
   );
 }
