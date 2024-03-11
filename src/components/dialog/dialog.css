@@ -1,0 +1,132 @@
+.dialog-overlay {
+    z-index: 20;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .dialog-body {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -5px rgba(gray, 0.04),
+      0 20px 25px -5px rgba(gray, 0.1);
+    overflow: hidden;
+  }
+  
+  .dialog-content {
+    max-height: calc(90vh - 40px);
+    padding: 1em;
+    overflow: auto;
+    height: fit-content;
+  }
+  
+  .dialog-body.dialog-padding {
+    padding: 0 2rem 2rem 2rem;
+  }
+  
+  .dialog-body.is-small {
+    max-width: 676px;
+  }
+  
+  .dialog-body.is-msmall {
+    max-width: 500px;
+  }
+  
+  .dialog-body.is-xsmall {
+    max-width: 400px;
+  }
+  
+  .dialog-body.is-large {
+    max-width: 1031px;
+  }
+  
+  .dialog-body.is-wide {
+    max-width: 900px;
+  }
+  
+  .dialog-body.is-slide {
+    max-width: 1400px;
+  }
+  
+  .dialog-header {
+    display: flex;
+    z-index: 1;
+    background: green;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 7px 14px;
+  }
+  
+  .dialog-title {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 0;
+    color: white;
+  }
+  
+  .dialog-open {
+    overflow: hidden;
+  }
+  
+  .dialog-footer {
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: red;
+  }
+  
+  .dialog-label {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 20px;
+  }
+  
+  .dialog-cancel {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: red;
+    transition: all 100ms;
+  }
+  
+  .dialog-cancel:hover {
+    color: white;
+  }
+  
+  .dialog-body .close-button {
+    color: white;
+    transition: all 100ms;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    width: 23px;
+    height: 23px;
+    font-size: 22px;
+  }
+  
+  .dialog-body .close-button:hover {
+    color: black;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .dialog-body {
+      /* max-width: 80% !important; */
+      height: 100vh;
+    }
+  }
