@@ -25,8 +25,8 @@ function ObjectList() {
   return (
     <div className="object_list">
       <ul>
-        {objects.map((item, index) => (
-          <Object key={index} item={item} />
+        {objects.map((item, _) => (
+          <Object object_name={item}/>
         ))}
       </ul>
     </div>
