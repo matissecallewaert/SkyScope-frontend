@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./object_list.css";
+import "./object-list.css";
 import Object from "./object/object";
 
 function ObjectList() {
   const [objects, setObjects] = useState([]);
-  
+
   const fetchObjectList = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/get-object-list");

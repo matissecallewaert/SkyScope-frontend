@@ -1,10 +1,11 @@
 import React from "react";
 import "./train.css";
+import ObjectList from "../../components/object-list/object-list";
 
 function Train() {
   return (
     <div>
-      <p> Hello hehe: 0 </p>
+      <ObjectList></ObjectList>
     </div>
   );
 }
