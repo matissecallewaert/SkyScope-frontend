@@ -15,17 +15,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<SharedPageLayout> </SharedPageLayout>}>
-            {" "}
-            <Route index element={<Home> </Home>} />{" "}
-            <Route path="dashboard" element={<Dashboard> </Dashboard>} />{" "}
-            <Route path="train" element={<Train> </Train>} />{" "}
-            <Route path="label" element={<Label> </Label>} />{" "}
-            <Route path="detection" element={<Detect> </Detect>} />{" "}
-            <Route path="contact" element={<Contact> </Contact>} />{" "}
-            <Route path="*" element={<Notfound> </Notfound>} />{" "}
-          </Route>{" "}
-        </Routes>{" "}
-      </BrowserRouter>{" "}
+            <Route index element={<Home> </Home>} />
+            <Route path="dashboard" element={<Dashboard> </Dashboard>} />
+            <Route path="train" element={<Train> </Train>} />
+            <Route path="label" element={<Label> </Label>} />
+            <Route path="detection" element={<Detect> </Detect>} />
+            <Route path="contact" element={<Contact> </Contact>} />
+            <Route path="*" element={<Notfound> </Notfound>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
