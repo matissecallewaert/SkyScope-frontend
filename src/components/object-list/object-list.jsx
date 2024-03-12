@@ -22,11 +22,34 @@ function ObjectList() {
     fetchObjectList();
   }, []);
 
+  const deleteObject = (object_name) => {
+    const url = `http://localhost:8000/api/delete-object`;
+    console.log(`deleting ${object_name}`)
+    fetch(url, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ object_name })
+    })
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        console.log(response)
+        return response.text();
+    })
+    .then(() => {
+        fetchObjectList();
+    })
+    .catch((error) => console.error("Error:", error));
+};
+
   return (
     <div className="object_list">
       <ul>
-        {objects.map((item, _) => (
-          <Object object_name={item}/>
+        {objects.map((item, index) => (
+          <Object key={index} object_name={item} onDelete={deleteObject}/>
         ))}
       </ul>
     </div>
